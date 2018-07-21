@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Hot Dogs == Sandwiches?</title>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<form name="myWebForm" action="mailto:youremail@email.com" method="post">
-First: <input title="Please Enter Your First Name" id="first" name="first" type="text" />
-<input type="submit" value="SUBMIT" />
-</form>
+<h1 id="hotDogOutput">Hot Dog Status:</h1>
+<input type="textfield" id="latestHotDogStatus" />
+<button id="saveButton">Save</button>
+<script src="./app.js"></script>
+
+
 </body>
 
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCHbO_STf1lt6ApLJmtM04jvlETKapaDiw",
-    authDomain: "cougatubapage.firebaseapp.com",
-    databaseURL: "https://cougatubapage.firebaseio.com",
-    projectId: "cougatubapage",
-    storageBucket: "cougatubapage.appspot.com",
-    messagingSenderId: "915171749535"
-  };
-  firebase.initializeApp(config);
-</script>
+
+
 
 
 
