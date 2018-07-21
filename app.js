@@ -51,8 +51,8 @@
 		  if (doc && doc.exists) {
 				const myData = doc.data();
 				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
-				outputBacon.innerText - "Bacon: " + myData.bacon;
-				outputBacon.innerText - "Flour: " + myData.flour;
+				outputBacon.innerText = "Bacon: " + myData.bacon;
+				outputBacon.innerText = "Flour: " + myData.flour;
 			}
 	  });
   }
