@@ -2,7 +2,10 @@
 <html>
 <body>
 <h1>Hello World</h1>
-<p>This is a test</p>
+<form name="myWebForm" action="mailto:youremail@email.com" method="post">
+First: <input title="Please Enter Your First Name" id="first" name="first" type="text" />
+<input type="submit" value="SUBMIT" />
+</form>
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
@@ -18,5 +21,7 @@
   };
   firebase.initializeApp(config);
 </script>
+
+
 
 </html>
