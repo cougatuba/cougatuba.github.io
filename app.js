@@ -41,3 +41,16 @@
 			console.log("Got an error: ", error);
 		});
   });
+  
+  getRealtimeUpdates = function() {
+	  docRef.onSnapshot(function (doc) {
+		  if (doc && doc.exists) {
+				const myData = doc.data();
+				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
+			}
+	  });
+  }
+  
+  getRealtimeUpdates();
+  
+  
