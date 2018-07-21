@@ -27,8 +27,8 @@
 		console.log("Status saved!");
 	}).catch(function (error) {
 		console.log("Got an error: ", error);
-	});
-  })
+	})
+  });
 	
 	loadButton.addEventListener("click", function() {
 		console.log("click");
