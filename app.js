@@ -14,6 +14,10 @@
   
   const docRef = firestore.doc("samples/sandwichData");
   const outputHeader = document.querySelector("#hotDogOutput");
+  
+  const outputBacon = document.querySelector("bacon");
+  const outputFlour = document.querySelector("flour");
+  
   const inputTextField = document.querySelector("#latestHotDogStatus");
   const saveButton = document.querySelector("#saveButton");
   const loadButton = document.querySelector("#loadButton");
@@ -47,9 +51,14 @@
 		  if (doc && doc.exists) {
 				const myData = doc.data();
 				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
+				outputBacon.innerText - "Bacon: " + myData.bacon;
+				outputBacon.innerText - "Flour: " + myData.flour;
 			}
 	  });
   }
+  
+  
+  
   
   getRealtimeUpdates();
   
