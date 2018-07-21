@@ -35,7 +35,7 @@
 		docRef.get().then(function (doc) {	
 			if (doc && doc.exists) {
 				const myData = doc.data();
-				outputHeader.innerText = "Hot Dog status: " + myData.hotDogStatus;
+				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogOutput;
 			}
 		}).catch(function (error) {
 			console.log("Got an error: ", error);
