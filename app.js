@@ -30,6 +30,7 @@
 	});
 	
 	loadButton.addEventListener("click", function() {
+		console.log("click");
 		docRef.get().then(function (doc) {	
 			if (doc && doc.exists) {
 				const myData = doc.data();
