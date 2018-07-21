@@ -22,7 +22,7 @@
 	const textToSave = inputTextField.value;
 	console.log("I am saving " + textToSave + " to Firestore");  
 	docRef.set({
-		hotDogOutput: textToSave
+		hotDogStatus: textToSave
 	}).then(function() {
 		console.log("Status saved!");
 	}).catch(function (error) {
@@ -35,7 +35,7 @@
 		docRef.get().then(function (doc) {	
 			if (doc && doc.exists) {
 				const myData = doc.data();
-				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogOutput;
+				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
 			}
 		}).catch(function (error) {
 			console.log("Got an error: ", error);
