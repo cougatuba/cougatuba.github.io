@@ -10,11 +10,18 @@
   };
   firebase.initializeApp(config);
   
-  var firestore = firebase.firestore();
   
-  const docRef = firestore.doc("samples/sandwichData");
+  var db = firebase.firestore();
   
-  var groceries = firestore.collection("groceries");
+  var grocColl = db.collection("groceries");
+  
+  
+  
+  
+  
+  const docRef = db.doc("samples/sandwichData");
+  
+  
   
   const outputHeader = document.querySelector("#hotDogOutput");
   
@@ -25,11 +32,11 @@
   const saveButton = document.querySelector("#saveButton");
   const loadButton = document.querySelector("#loadButton");
   
-  groceries.set();
+  
   
   saveButton.addEventListener("click", function() {
 	const textToSave = inputTextField.value;
-	console.log("I am saving " + textToSave + " to Firestore");  
+	console.log("I am saving " + textToSave + " to db");  
 	docRef.set({
 		hotDogStatus: textToSave
 	}).then(function() {
