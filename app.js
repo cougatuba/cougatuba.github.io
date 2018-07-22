@@ -14,7 +14,7 @@
   
   const docRef = firestore.doc("samples/sandwichData");
   
-  var groceries = firestore.doc("groceries");
+  var groceries = firestore.collection("groceries");
   
   const outputHeader = document.querySelector("#hotDogOutput");
   
