@@ -25,7 +25,7 @@
   const saveButton = document.querySelector("#saveButton");
   const loadButton = document.querySelector("#loadButton");
   
-  groceries.ste();
+  groceries.set();
   
   saveButton.addEventListener("click", function() {
 	const textToSave = inputTextField.value;
