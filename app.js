@@ -13,6 +13,9 @@
   var firestore = firebase.firestore();
   
   const docRef = firestore.doc("samples/sandwichData");
+  
+  var groceries = firestore.doc("groceries");
+  
   const outputHeader = document.querySelector("#hotDogOutput");
   
   const outputBacon = document.querySelector("bacon");
