@@ -25,6 +25,8 @@
   const saveButton = document.querySelector("#saveButton");
   const loadButton = document.querySelector("#loadButton");
   
+  groceries.ste();
+  
   saveButton.addEventListener("click", function() {
 	const textToSave = inputTextField.value;
 	console.log("I am saving " + textToSave + " to Firestore");  
@@ -54,8 +56,8 @@
 		  if (doc && doc.exists) {
 				const myData = doc.data();
 				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
-				outputBacon.innerText = "Bacon: " + myData.bacon;
-				outputBacon.innerText = "Flour: " + myData.flour;
+				//outputBacon.innerText = "Bacon: " + myData.bacon;
+				//outputBacon.innerText = "Flour: " + myData.flour;
 			}
 	  });
   }
