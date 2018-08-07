@@ -13,7 +13,7 @@
   var db = firebase.firestore();
   
   db.collection("groceries").add({
-	 "taco";
+	 "taco"
   })
   
   var addItemTextField = document.querySelector("#newGroceryItem");
