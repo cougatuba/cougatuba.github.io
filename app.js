@@ -10,35 +10,26 @@
   };
   firebase.initializeApp(config);
   
-  
   var db = firebase.firestore();
   
-  var grocColl = db.collection("groceries");
+  db.collection("groceries").add({
+	 item: "Taco",
+	 quantity: "5",
+	 unit: "shells"
+  })
+  
+  var addItemTextField = document.querySelector("#newGroceryItem");
+  var addButton = document.querySelector("#addGroceryItem");
   
   
-  
-  
-  
-  const docRef = db.doc("samples/sandwichData");
-  
-  
-  
-  const outputHeader = document.querySelector("#hotDogOutput");
-  
-  const outputBacon = document.querySelector("bacon");
-  const outputFlour = document.querySelector("flour");
-  
-  const inputTextField = document.querySelector("#latestHotDogStatus");
-  const saveButton = document.querySelector("#saveButton");
-  const loadButton = document.querySelector("#loadButton");
-  
-  
-  
-  saveButton.addEventListener("click", function() {
+  addButton.addEventListener("click", function() {
 	const textToSave = inputTextField.value;
-	console.log("I am saving " + textToSave + " to db");  
-	docRef.set({
-		hotDogStatus: textToSave
+	
+	var addItem =  addItemTextField.value;
+	
+	console.log("I am saving " + additem + " to db");  
+	grocColl.set({
+		item: textToSave
 	}).then(function() {
 		console.log("Status saved!");
 	}).catch(function (error) {
