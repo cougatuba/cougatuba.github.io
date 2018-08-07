@@ -23,7 +23,6 @@
   
   
   addButton.addEventListener("click", function() {
-	const textToSave = inputTextField.value;
 	
 	var addItem =  addItemTextField.value;
 	
@@ -35,34 +34,4 @@
 	}).catch(function (error) {
 		console.log("Got an error: ", error);
 	});
-  });
-	
-	loadButton.addEventListener("click", function() {
-		console.log("click");
-		docRef.get().then(function (doc) {	
-			if (doc && doc.exists) {
-				const myData = doc.data();
-				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
-			}
-		}).catch(function (error) {
-			console.log("Got an error: ", error);
-		});
-  });
-  
-  getRealtimeUpdates = function() {
-	  docRef.onSnapshot(function (doc) {
-		  if (doc && doc.exists) {
-				const myData = doc.data();
-				outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
-				//outputBacon.innerText = "Bacon: " + myData.bacon;
-				//outputBacon.innerText = "Flour: " + myData.flour;
-			}
-	  });
-  }
-  
-  
-  
-  
-  getRealtimeUpdates();
-  
-  
+  }) 
