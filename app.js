@@ -26,7 +26,7 @@
 	
 	var addItem =  addItemTextField.value;
 	
-	console.log("I am saving " + additem + " to db");  
+	console.log("I am saving " + addItem + " to db");  
 	grocColl.set({
 		item: textToSave
 	}).then(function() {
